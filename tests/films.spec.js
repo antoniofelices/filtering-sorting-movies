@@ -148,7 +148,7 @@ describe('Function "moviesAverageOfDirector"', () => {
 })
 
 // Exercise 4
-describe.skip('Function "orderAlphabetically"', () => {
+describe('Function "orderAlphabetically"', () => {
     it('should be declared', () => {
         expect(typeof orderAlphabetically).toBe('function')
     })
@@ -256,7 +256,7 @@ describe.skip('Function "orderAlphabetically"', () => {
 })
 
 // Exercise 5
-describe.skip('Function "orderByYear"', () => {
+describe('Function "orderByYear"', () => {
     it('should be declared', () => {
         expect(typeof orderByYear).toBe('function')
     })
