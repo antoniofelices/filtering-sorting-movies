@@ -1,7 +1,7 @@
 {
-    "name": "itacademy-sprint4",
-    "version": "1.0.0",
-    "license": "UNLICENSED",
+    "name": "sprint-3-it-academy",
+    "private": true,
+    "version": "0.0.1",
     "type": "module",
     "scripts": {
         "test": "jest",
@@ -19,7 +19,7 @@
                 "./node_modules/jest-html-reporter",
                 {
                     "pageTitle": "Test Solution",
-                    "outputPath": "test-results.html",
+                    "outputPath": "tests/test-results.html",
                     "includeFailureMsg": true,
                     "includeConsoleLog": true
                 }

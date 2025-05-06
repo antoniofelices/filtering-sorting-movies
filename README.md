@@ -2,18 +2,19 @@
 
 ## Description
 
-### Some decisions
+Practice implementing functions that filter, sort, and analyse a dataset of movies using Jest.
+At the end is just a set of excercises to learn the Jest framework and how to do testing.
 
--
+![Preview](src/assets/images/preview-00.webp 'Testing Preview')
 
 ## Technologies
 
-- JavaScript.
+-   JavaScript.
 
 ## Requirements
 
-- Node.js v23.9.0
-- npm v11.2.0
+-   Node.js v23.9.0
+-   npm v11.2.0
 
 ## Documentation
 
@@ -31,11 +32,15 @@ $ git clone https://github.com/antoniofelices/filtering-sorting-movies .
 $ npm install
 ```
 
-3.
+3. Run tests
+
+```bash
+$ npm run test:watch
+```
 
 ## Future Improvements
 
--
+-   Refact using vitest.
 
 ## Contributing
 
