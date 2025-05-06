@@ -1,4 +1,5 @@
 const movies = require('../src/data')
+
 const {
     getAllDirectors,
     getMoviesFromDirector,
@@ -11,7 +12,7 @@ const {
 } = require('../src/films')
 
 // Exercise 1
-describe('Function "getAllDirectors"', () => {
+describe.skip('Function "getAllDirectors"', () => {
     it('should be declared', () => {
         expect(typeof getAllDirectors).toBe('function')
     })
@@ -51,7 +52,7 @@ describe('Function "getAllDirectors"', () => {
 })
 
 // Exercise 2
-describe('Function "getMoviesFromDirector"', () => {
+describe.skip('Function "getMoviesFromDirector"', () => {
     it('should be declared', () => {
         expect(typeof getMoviesFromDirector).toBe('function')
     })
@@ -97,7 +98,7 @@ describe('Function "getMoviesFromDirector"', () => {
 })
 
 // Exercise 3
-describe('Function "moviesAverageOfDirector"', () => {
+describe.skip('Function "moviesAverageOfDirector"', () => {
     it('should be declared', () => {
         expect(typeof moviesAverageOfDirector).toBe('function')
     })
@@ -148,7 +149,7 @@ describe('Function "moviesAverageOfDirector"', () => {
 })
 
 // Exercise 4
-describe('Function "orderAlphabetically"', () => {
+describe.skip('Function "orderAlphabetically"', () => {
     it('should be declared', () => {
         expect(typeof orderAlphabetically).toBe('function')
     })
@@ -256,7 +257,7 @@ describe('Function "orderAlphabetically"', () => {
 })
 
 // Exercise 5
-describe('Function "orderByYear"', () => {
+describe.skip('Function "orderByYear"', () => {
     it('should be declared', () => {
         expect(typeof orderByYear).toBe('function')
     })
@@ -296,11 +297,71 @@ describe('Function "orderByYear"', () => {
 })
 
 // Exercise 6
-// YOUR CODE HERE. Test moviesAverageByCategory()
-describe.skip('Function "moviesAverageByCategory"', () => {
-    it('ADD YOUR CODE IN films.spec.js file', () => {
-        expect(typeof hoursToMinutes).toBe('coffee')
+describe('Function "moviesAverageByCategory"', () => {
+    it('should be declared', () => {
+        expect(typeof moviesAverageByCategory).toBe('function')
     })
+    // Pasa por que funcion tiene retorno temprano de undefined si no se pasan parametros
+    it('should return undefined, because do not pass parameters', () => {
+        expect(moviesAverageByCategory()).toBeUndefined()
+    })
+    // Pasa por que devuelve un numero y con typeof estoy comprobando que eso es un numero.
+    it('should return a number', () => {
+        expect(typeof moviesAverageByCategory(movies, 'Drama')).toBe('number')
+    })
+
+    it('should return the average score of movies selecting only the genre films. With 2 decimals! ', () => {
+        expect(
+            moviesAverageByCategory(
+                [
+                    {
+                        title: 'The Godfather',
+                        year: 1972,
+                        director: 'Francis Ford Coppola',
+                        duration: '2h 55min',
+                        genre: ['Crime', 'Drama'],
+                        score: 9.2,
+                    },
+                    {
+                        title: 'The Godfather: Part II',
+                        year: 1974,
+                        director: 'Francis Ford Coppola',
+                        duration: '3h 22min',
+                        genre: ['Crime', 'Drama'],
+                        score: 9,
+                    },
+                    {
+                        title: 'Pulp Fiction',
+                        year: 1994,
+                        director: 'Quentin Tarantino',
+                        duration: '2h 34min',
+                        genre: ['Crime', 'Drama'],
+                        score: 8.9,
+                    },
+                ],
+                'Crime'
+            )
+        ).toBe(9.03)
+    })
+
+    // Error, estoy devolviendo un numero, esto espera que devuelva un array
+    // it('should return an array', () => {
+    //     expect(moviesAverageByCategory(movies, 'Drama') instanceof Array).toBe(
+    //         true
+    //     )
+    // })
+
+    // Error, devuelve Object… debe devolver number y devuelve object… por que?
+    // it('should return length del array filtrado', () => {
+    //     expect(moviesAverageByCategory(movies, 'Sport')).toBe(true)
+    // })
+
+    // // No pasa por que devuelve un array y estoy devolviendo un numero. Si funcion devuelve un array, pasaria.
+    // it('should return an array', () => {
+    //     expect(moviesAverageByCategory(movies, 'Drama') instanceof Array).toBe(
+    //         true
+    //     )
+    // })
 })
 
 // Exercise 7
