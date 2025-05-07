@@ -31,20 +31,30 @@ function moviesAverageOfDirector(movies, director) {
 
 // Exercise 4:  Alphabetic order by title
 function orderAlphabetically(movies) {
-    const data = movies
+    let moviesOrderByAlphabetic = []
+
+    if (!movies) return moviesOrderByAlphabetic
+
+    moviesOrderByAlphabetic = movies
         .map((movie) => movie.title)
         .toSorted()
         .slice(0, 20)
-    return data
+
+    return moviesOrderByAlphabetic
 }
 
 // Exercise 5: Order by year, ascending
 function orderByYear(movies) {
-    const data = movies.toSorted((x, y) => {
+    let moviesOrderByYear = []
+
+    if (!movies) return moviesOrderByYear
+
+    moviesOrderByYear = movies.toSorted((x, y) => {
         if (x.year - y.year == 0) return x.title.localeCompare(y.title, 'en')
         return x.year - y.year
     })
-    return data
+
+    return moviesOrderByYear
 }
 
 // Exercise 6: Calculate the average of the movies in a category
@@ -102,7 +112,24 @@ function hoursToMinutes(movies) {
 }
 
 // Exercise 8: Get the best film of a year
-function bestFilmOfYear() {}
+function bestFilmOfYear(movies, year) {
+    let moviesByYear = []
+    let scores = []
+    let maxScore = 0
+    let moviesOfTheYear = []
+
+    if (!movies || !year) return moviesOfTheYear
+
+    moviesByYear = movies.filter((movie) => movie.year == year)
+
+    if (moviesByYear.length === 0) return moviesOfTheYear
+
+    scores = moviesByYear.map((movie) => movie.score)
+    maxScore = Math.max(...scores)
+    moviesOfTheYear = moviesByYear.filter((movie) => movie.score === maxScore)
+
+    return moviesOfTheYear
+}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
