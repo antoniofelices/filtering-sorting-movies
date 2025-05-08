@@ -2,14 +2,14 @@
 
 ## Description
 
-Practice implementing functions that filter, sort, and analyse a dataset of movies using Jest.
-At the end is just a set of excercises to learn the Jest framework and how to do testing.
-
-![Preview](src/assets/images/preview-00.webp 'Testing Preview')
+Practice implementing functions that filter, sort, and analyse a dataset of movies using Vite and Vitest.
+At the end is just a set of excercises to learn Vitest and how to do testing.
 
 ## Technologies
 
 -   JavaScript.
+-   Vite.
+-   Vitest.
 
 ## Requirements
 
@@ -35,12 +35,8 @@ $ npm install
 3. Run tests
 
 ```bash
-$ npm run test:watch
+$ npm test:watch
 ```
-
-## Future Improvements
-
--   Refact using vitest.
 
 ## Contributing
 

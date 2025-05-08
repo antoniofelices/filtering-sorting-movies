@@ -1,37 +1,18 @@
 {
     "name": "sprint-3-it-academy",
     "private": true,
-    "version": "0.0.1",
+    "version": "0.0.2",
     "type": "module",
     "scripts": {
-        "test": "jest",
-        "test:watch": "jest --watchAll --verbose"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test:watch": "vitest",
+        "coverage": "vitest run --coverage"
     },
     "devDependencies": {
-        "jest": "^29.2.2",
-        "jest-html-reporter": "^4.1.0",
-        "jest-junit": "^16.0.0"
-    },
-    "jest": {
-        "reporters": [
-            "default",
-            [
-                "./node_modules/jest-html-reporter",
-                {
-                    "pageTitle": "Test Solution",
-                    "outputPath": "tests/test-results.html",
-                    "includeFailureMsg": true,
-                    "includeConsoleLog": true
-                }
-            ]
-        ]
-    },
-    "jest-junit": {
-        "suiteNameTemplate": "{filepath}",
-        "classNameTemplate": "{classname}",
-        "titleTemplate": "{title}"
-    },
-    "dependencies": {
-        "browserify": "^17.0.0"
+        "path": "^0.12.7",
+        "vite": "^6.3.5",
+        "vitest": "^3.1.3"
     }
 }
