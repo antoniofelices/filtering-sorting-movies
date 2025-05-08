@@ -1,5 +1,5 @@
 // Exercise 6: Calculate the average of the movies in a category
-function moviesAverageByCategory(movies, genre) {
+export default function moviesAverageByCategory(movies, genre) {
     if (!movies || !genre) return 0
 
     let moviesByCategory = []

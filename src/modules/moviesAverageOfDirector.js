@@ -1,3 +1,5 @@
+import getMoviesFromDirector from '@modules/getMoviesFromDirector'
+
 // Exercise 3: Calculate the average of the films of a given director.
 export default function moviesAverageOfDirector(movies, director) {
     if (!movies || !director) return 0
