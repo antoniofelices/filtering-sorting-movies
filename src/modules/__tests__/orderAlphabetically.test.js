@@ -10,6 +10,10 @@ describe('Function "orderAlphabetically"', () => {
         expect(typeof orderAlphabetically([])).toBe('object')
     })
 
+    it('should return an array', () => {
+        expect(orderAlphabetically() instanceof Array).toBe(true)
+    })
+
     it('should not mutate the original array', () => {
         const arr = [{ title: 'xyz' }, { title: 'abc' }]
         orderAlphabetically(arr)

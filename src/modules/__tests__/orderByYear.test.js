@@ -11,6 +11,10 @@ describe('Function "orderByYear"', () => {
         expect(typeof orderByYear(movies)).toBe('object')
     })
 
+    it('should return an array', () => {
+        expect(orderByYear() instanceof Array).toBe(true)
+    })
+
     it('should return a new array', () => {
         const arr = []
         expect(orderByYear(arr)).not.toBe(arr)

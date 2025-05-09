@@ -8,7 +8,15 @@ describe('Function "bestFilmOfYear"', () => {
     })
 
     it('should return an array', () => {
+        expect(bestFilmOfYear() instanceof Array).toBe(true)
+    })
+
+    it('should return an array', () => {
         expect(bestFilmOfYear(movies, 1999) instanceof Array).toBe(true)
+    })
+
+    it('should return an array', () => {
+        expect(bestFilmOfYear([], 1999) instanceof Array).toBe(true)
     })
 
     it('should return a new array, not update the original one', () => {

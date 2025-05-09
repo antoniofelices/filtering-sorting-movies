@@ -11,6 +11,10 @@ describe('Function "hoursToMinutes"', () => {
         expect(hoursToMinutes(movies) instanceof Array).toBe(true)
     })
 
+    it('should return an array, a empty array, but an array', () => {
+        expect(hoursToMinutes() instanceof Array).toBe(true)
+    })
+
     it('should return a new array, not update the original one', () => {
         expect(hoursToMinutes(movies)).not.toEqual(movies)
     })

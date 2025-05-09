@@ -7,6 +7,7 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
             '@content': path.resolve(__dirname, './src/content'),
             '@modules': path.resolve(__dirname, './src/modules'),
+            '@tests': path.resolve(__dirname, './src/modules/__tests__'),
         },
     },
 })
