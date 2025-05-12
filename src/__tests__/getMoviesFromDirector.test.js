@@ -1,21 +1,21 @@
 import { describe, it, expect } from 'vitest'
-import getAllDirectors from '@modules/getAllDirectors'
+import getMoviesFromDirector from '@modules/movies/getMoviesFromDirector'
 import movies from '@content/data'
 
-describe('Function "getAllDirectors"', () => {
+describe('Function "getMoviesFromDirector"', () => {
     it('should be declared', () => {
-        expect(typeof getAllDirectors).toBe('function')
+        expect(typeof getMoviesFromDirector).toBe('function')
     })
 
     it('should return an array', () => {
-        expect(getAllDirectors(movies) instanceof Array).toBe(true)
+        expect(getMoviesFromDirector(movies) instanceof Array).toBe(true)
     })
 
     it('should return a new array, not update the original one', () => {
-        expect(getAllDirectors(movies)).not.toEqual(movies)
+        expect(getMoviesFromDirector(movies)).not.toEqual(movies)
     })
 
-    it('should return a new array with the same length as the original one', () => {
+    it('should return a new array with the movies from director', () => {
         const testArr = [
             {
                 title: 'Paths of Glory',
@@ -34,9 +34,15 @@ describe('Function "getAllDirectors"', () => {
                 score: 8.4,
             },
         ]
-        expect(getAllDirectors(testArr)).toEqual([
-            'Stanley Kubrick',
-            'Quentin Tarantino',
+        expect(getMoviesFromDirector(testArr, 'Quentin Tarantino')).toEqual([
+            {
+                title: 'Django Unchained',
+                year: 2012,
+                director: 'Quentin Tarantino',
+                duration: '2h 45min',
+                genre: ['Drama', 'Western'],
+                score: 8.4,
+            },
         ])
     })
 })

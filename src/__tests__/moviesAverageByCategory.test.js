@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import moviesAverageByCategory from '@modules/moviesAverageByCategory'
+import moviesAverageByCategory from '@modules/movies/moviesAverageByCategory'
 import movies from '@content/data'
 
 describe('Function "moviesAverageByCategory"', () => {

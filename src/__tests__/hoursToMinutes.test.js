@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import hoursToMinutes from '@modules/hoursToMinutes'
+import hoursToMinutes from '@modules/movies/hoursToMinutes'
 import movies from '@content/data'
 
 describe('Function "hoursToMinutes"', () => {

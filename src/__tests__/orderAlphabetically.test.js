@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import orderAlphabetically from '@modules/orderAlphabetically'
+import orderAlphabetically from '@modules/movies/orderAlphabetically'
 
 describe('Function "orderAlphabetically"', () => {
     it('should be declared', () => {
