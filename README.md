@@ -34,19 +34,31 @@ At the end is just a set of excercises to learn Vitest and how to do testing.
 $ git clone https://github.com/antoniofelices/filtering-sorting-movies .
 ```
 
-2. Install packages
+2. Display branchs
+
+```bash
+$ git branch --all
+```
+
+3. Checkout branch vitest
+
+```bash
+$ git checkout vitest
+```
+
+4. Install packages
 
 ```bash
 $ npm install
 ```
 
-3. Run tests
+5. Run tests
 
 ```bash
 $ npm test:watch
 ```
 
-3. Run coverage
+6. Run coverage
 
 ```bash
 $ npm coverage
