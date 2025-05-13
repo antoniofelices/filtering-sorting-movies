@@ -1,32 +1,32 @@
 import { describe, it, expect } from 'vitest'
-import orderAlphabetically from '@modules/movies/orderAlphabetically'
+import { orderByTitle } from '@modules/movies'
 
-describe('Function "orderAlphabetically"', () => {
+describe('Function "orderByTitle"', () => {
     it('should be declared', () => {
-        expect(typeof orderAlphabetically).toBe('function')
+        expect(typeof orderByTitle).toBe('function')
     })
 
     it('should return an array', () => {
-        expect(typeof orderAlphabetically([])).toBe('object')
+        expect(typeof orderByTitle([])).toBe('object')
     })
 
     it('should return an array', () => {
-        expect(orderAlphabetically() instanceof Array).toBe(true)
+        expect(orderByTitle() instanceof Array).toBe(true)
     })
 
     it('should not mutate the original array', () => {
         const arr = [{ title: 'xyz' }, { title: 'abc' }]
-        orderAlphabetically(arr)
+        orderByTitle(arr)
         expect(arr[0].title).toEqual('xyz')
     })
 
     it('should only return the title of the movies, each value should be a string', () => {
-        expect(typeof orderAlphabetically([{ title: 'aab' }])[0]).toBe('string')
+        expect(typeof orderByTitle([{ title: 'aab' }])[0]).toBe('string')
     })
 
     it('should return all of items when the array passed has fewer than 20 items', () => {
         const moviesArr = [{ title: 'aab' }, { title: 'bab' }, { title: 'acb' }]
-        expect(orderAlphabetically(moviesArr)).toHaveLength(3)
+        expect(orderByTitle(moviesArr)).toHaveLength(3)
     })
 
     it('should order them alphabetically.', () => {
@@ -38,7 +38,7 @@ describe('Function "orderAlphabetically"', () => {
             { title: 'abb' },
         ]
 
-        expect(orderAlphabetically(moviesArr)).toEqual([
+        expect(orderByTitle(moviesArr)).toEqual([
             'aaa',
             'aab',
             'abb',
@@ -87,7 +87,7 @@ describe('Function "orderAlphabetically"', () => {
             { title: 'pol' },
         ]
 
-        expect(orderAlphabetically(moviesArr)).toEqual([
+        expect(orderByTitle(moviesArr)).toEqual([
             'aaa',
             'aab',
             'acb',

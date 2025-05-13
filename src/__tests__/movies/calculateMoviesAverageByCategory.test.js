@@ -1,23 +1,25 @@
 import { describe, it, expect } from 'vitest'
-import moviesAverageByCategory from '@modules/movies/moviesAverageByCategory'
+import { calculateMoviesAverageByCategory } from '@modules/movies'
 import movies from '@content/data'
 
-describe('Function "moviesAverageByCategory"', () => {
+describe('Function "calculateMoviesAverageByCategory"', () => {
     it('should be declared', () => {
-        expect(typeof moviesAverageByCategory).toBe('function')
+        expect(typeof calculateMoviesAverageByCategory).toBe('function')
     })
 
     it('should return 0, because do not pass parameters', () => {
-        expect(typeof moviesAverageByCategory()).toBe('number')
+        expect(typeof calculateMoviesAverageByCategory()).toBe('number')
     })
 
     it('should return a number', () => {
-        expect(typeof moviesAverageByCategory(movies, 'Drama')).toBe('number')
+        expect(typeof calculateMoviesAverageByCategory(movies, 'Drama')).toBe(
+            'number'
+        )
     })
 
     it('should return 0 average score, because 0/1 = 0', () => {
         expect(
-            moviesAverageByCategory(
+            calculateMoviesAverageByCategory(
                 [
                     {
                         title: 'The Godfather',
@@ -51,7 +53,7 @@ describe('Function "moviesAverageByCategory"', () => {
 
     it('should return the average score of movies selecting only the genre films. With 2 decimals! ', () => {
         expect(
-            moviesAverageByCategory(
+            calculateMoviesAverageByCategory(
                 [
                     {
                         title: 'The Godfather',

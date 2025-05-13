@@ -1,29 +1,31 @@
 import { describe, it, expect } from 'vitest'
-import moviesAverageOfDirector from '@modules/movies/moviesAverageOfDirector'
+import { calculateMoviesAverageByDirector } from '@modules/movies'
 import movies from '@content/data'
 
-describe('Function "moviesAverageOfDirector"', () => {
+describe('Function "calculateMoviesAverageByDirector"', () => {
     it('should be declared', () => {
-        expect(typeof moviesAverageOfDirector).toBe('function')
+        expect(typeof calculateMoviesAverageByDirector).toBe('function')
     })
 
     it('should return a number', () => {
-        expect(typeof moviesAverageOfDirector(movies, 'Stanley Kubrick')).toBe(
-            'number'
-        )
+        expect(
+            typeof calculateMoviesAverageByDirector(movies, 'Stanley Kubrick')
+        ).toBe('number')
     })
 
     it('should return a number', () => {
-        expect(typeof moviesAverageOfDirector()).toBe('number')
+        expect(typeof calculateMoviesAverageByDirector()).toBe('number')
     })
 
     it('should be different from NaN', () => {
-        expect(moviesAverageOfDirector(movies, 'Stanley Kubrick')).not.toBeNaN()
+        expect(
+            calculateMoviesAverageByDirector(movies, 'Stanley Kubrick')
+        ).not.toBeNaN()
     })
 
     it('should return 0 average score, because 0/1 = 0', () => {
         expect(
-            moviesAverageOfDirector(
+            calculateMoviesAverageByDirector(
                 [
                     {
                         title: 'Paths of Glory',
@@ -57,7 +59,7 @@ describe('Function "moviesAverageOfDirector"', () => {
 
     it(' should return the average score of movies selecting only the director films. With 2 decimals! ', () => {
         expect(
-            moviesAverageOfDirector(
+            calculateMoviesAverageByDirector(
                 [
                     {
                         title: 'Paths of Glory',
