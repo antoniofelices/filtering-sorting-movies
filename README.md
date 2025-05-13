@@ -5,11 +5,17 @@
 Practice implementing functions that filter, sort, and analyse a dataset of movies using Jest.
 At the end is just a set of excercises to learn the Jest framework and how to do testing.
 
-![Preview](src/assets/images/preview-00.webp 'Testing Preview')
+### Some decisions
+
+- Work on two branchs: jest and vitest. Each branches has it's own technology and folder structure, preview images, etc.
+- Remove everything from the main branch.
 
 ## Technologies
 
--   JavaScript.
+- JavaScript.
+- Jest.
+- Vite.
+- Vitest.
 
 ## Requirements
 
@@ -26,13 +32,29 @@ At the end is just a set of excercises to learn the Jest framework and how to do
 $ git clone https://github.com/antoniofelices/filtering-sorting-movies .
 ```
 
-2. Install packages
+2. Display branchs
+
+```bash
+$ git branch --all
+```
+
+3. Checkout branch jest o vitest
+
+```bash
+$ git checkout jest
+```
+
+```bash
+$ git checkout vitest
+```
+
+4. Install packages
 
 ```bash
 $ npm install
 ```
 
-3. Run tests
+5. Run tests
 
 ```bash
 $ npm run test:watch
@@ -40,7 +62,8 @@ $ npm run test:watch
 
 ## Future Improvements
 
--   Refact using vitest.
+- Understanding mock functions.
+- Fix github Automated Testing workflow.
 
 ## Contributing
 
