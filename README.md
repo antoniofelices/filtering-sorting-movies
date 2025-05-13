@@ -5,6 +5,14 @@
 Practice implementing functions that filter, sort, and analyse a dataset of movies using Vite and Vitest.
 At the end is just a set of excercises to learn Vitest and how to do testing.
 
+![Preview](src/assets/images/preview-01.webp 'Coverage Preview')
+
+### Some decisions
+
+-   Use Vite and Vitest as development tools.
+-   Refactor the folder structure of the base project. Move movies to its own module. Move test to directory test.
+-   Add modules path and coverage.
+
 ## Technologies
 
 -   JavaScript.
@@ -36,6 +44,12 @@ $ npm install
 
 ```bash
 $ npm test:watch
+```
+
+3. Run coverage
+
+```bash
+$ npm coverage
 ```
 
 ## Contributing
