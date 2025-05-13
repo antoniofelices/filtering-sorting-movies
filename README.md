@@ -7,9 +7,14 @@ At the end is just a set of excercises to learn the Jest framework and how to do
 
 ![Preview](src/assets/images/preview-00.webp 'Testing Preview')
 
+### Some decisions
+
+-   Move test-results.html to the tests directory.
+
 ## Technologies
 
 -   JavaScript.
+-   Jest.
 
 ## Requirements
 
@@ -26,21 +31,29 @@ At the end is just a set of excercises to learn the Jest framework and how to do
 $ git clone https://github.com/antoniofelices/filtering-sorting-movies .
 ```
 
-2. Install packages
+2. Display branchs
+
+```bash
+$ git branch --all
+```
+
+3. Checkout branch Jest
+
+```bash
+$ git checkout jest
+```
+
+4. Install packages
 
 ```bash
 $ npm install
 ```
 
-3. Run tests
+5. Run tests
 
 ```bash
 $ npm run test:watch
 ```
-
-## Future Improvements
-
--   Refact using vitest.
 
 ## Contributing
 
