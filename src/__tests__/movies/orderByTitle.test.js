@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { orderByTitle } from '@core/movies'
+import { orderByTitle } from '@core/movies/order'
 
 describe('Function "orderByTitle"', () => {
     it('should be declared', () => {

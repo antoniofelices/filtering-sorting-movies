@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { getBestFilmOfYear } from '@core/movies'
+import { getBestFilmOfYear } from '@core/movies/filter'
 import movies from '@data/moviesData'
 
 describe('Function "getBestFilmOfYear"', () => {

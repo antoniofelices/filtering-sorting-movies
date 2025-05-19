@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { getAllDirectors } from '@core/movies'
+import { getAllDirectors } from '@core/movies/filter'
 import movies from '@data/moviesData'
 
 describe('Function "getAllDirectors"', () => {

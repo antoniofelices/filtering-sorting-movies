@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { orderByYear } from '@core/movies'
+import { orderByYear } from '@core/movies/order'
 import movies from '@data/moviesData'
 
 describe('Function "orderByYear"', () => {

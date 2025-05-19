@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { modifyGenreArrayDeepCopy } from '@core/movies'
+import { modifyGenreArrayDeepCopy } from '@core/movies/modify'
 import movies from '@data/moviesData'
 
 describe('Function "modifyGenreArrayDeepCopy"', () => {

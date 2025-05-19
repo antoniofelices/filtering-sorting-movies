@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { calculateMoviesAverageByDirector } from '@core/movies'
+import { calculateMoviesAverageByDirector } from '@core/movies/calculate'
 import movies from '@data/moviesData'
 
 describe('Function "calculateMoviesAverageByDirector"', () => {

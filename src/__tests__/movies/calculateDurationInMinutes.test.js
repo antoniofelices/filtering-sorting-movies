@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { calculateDurationInMinutes } from '@core/movies'
+import { calculateDurationInMinutes } from '@core/movies/calculate'
 import movies from '@data/moviesData'
 
 describe('Function "calculateDurationInMinutes"', () => {
