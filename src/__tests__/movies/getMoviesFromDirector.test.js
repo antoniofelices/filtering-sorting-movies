@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { getMoviesFromDirector } from '@modules/movies'
-import movies from '@content/data'
+import { getMoviesFromDirector } from '@core/movies'
+import movies from '@data/moviesData'
 
 describe('Function "getMoviesFromDirector"', () => {
     it('should be declared', () => {

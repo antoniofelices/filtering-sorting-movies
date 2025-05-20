@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { calculateMoviesAverageByDirector } from '@modules/movies'
-import movies from '@content/data'
+import { calculateMoviesAverageByDirector } from '@core/movies'
+import movies from '@data/moviesData'
 
 describe('Function "calculateMoviesAverageByDirector"', () => {
     it('should be declared', () => {

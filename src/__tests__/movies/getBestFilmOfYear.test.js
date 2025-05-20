@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { getBestFilmOfYear } from '@modules/movies'
-import movies from '@content/data'
+import { getBestFilmOfYear } from '@core/movies'
+import movies from '@data/moviesData'
 
 describe('Function "getBestFilmOfYear"', () => {
     it('should be declared', () => {
